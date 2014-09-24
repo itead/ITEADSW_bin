@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# echo $#
+# echo $@
+# echo $*
+
+cd /boot > /dev/null
+
+if [ $# == 1 ] && [[ $1 == "gmac" ]] ; then
+    echo "Switch to gmac"
+    cp script.bin-gmac script.bin
+    cp script.fex-gmac script.fex
+    echo "!!! FATAL: You need to reboot for your change."
+elif [ $# == 1 ] && [[ $1 == "emac" ]] ; then
+    echo "Switch to emac"
+    cp script.bin-emac script.bin
+    cp script.fex-emac script.fex
+    echo "!!! FATAL: You need to reboot for your change."
+else
+    echo "Invalid usage !"
+    echo "Usage:"
+    echo "  sudo itead-ethernet gmac"
+    echo "  sudo itead-ethernet emac"
+    echo ""
+fi
+
+cd - > /dev/null
