@@ -1,5 +1,5 @@
 bin
 ===
 
-Provide binary, config, and other files for IteadOS
+Distribute *.bin, *.fex, *.ko and other files for ITEAD-OS
 
