@@ -76,14 +76,14 @@ standby_mode = 0
 dram_baseaddr = 0x40000000
 dram_clk = 432
 dram_type = 3
-dram_rank_num = 0
-dram_chip_density = 0
-dram_io_width = 0
-dram_bus_width = 0
+dram_rank_num = -1
+dram_chip_density = -1
+dram_io_width = -1
+dram_bus_width = -1
 dram_cas = 9
 dram_zq = 0x7f
 dram_odt_en = 0
-dram_size = 0
+dram_size = -1
 dram_tpr0 = 0x42d899b7
 dram_tpr1 = 0xa090
 dram_tpr2 = 0x22a00
@@ -99,7 +99,7 @@ mali_used = 1
 mali_clkdiv = 1
 
 [emac_para]
-emac_used = 1 
+emac_used = 0 
 emac_rxd3 = port:PA00<2><default><3><default>
 emac_rxd2 = port:PA01<2><default><3><default>
 emac_rxd1 = port:PA02<2><default><3><default>
@@ -120,7 +120,7 @@ emac_col = port:PA16<2><default><3><default>
 emac_reset = port:PA17<1><default><3><default>
 
 [gmac_para]
-gmac_used = 0
+gmac_used = 1
 gmac_rxd3 = port:PA00<5><default><3><default>
 gmac_rxd2 = port:PA01<5><default><3><default>
 gmac_rxd1 = port:PA02<5><default><3><default>
